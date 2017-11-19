@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {ModuleWithProviders, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HeaderComponent} from './header.component';
 
@@ -14,4 +14,12 @@ import {HeaderComponent} from './header.component';
     ]
 })
 export class HeaderModule {
+
+    public static forRoot(): ModuleWithProviders {
+
+        return {
+            ngModule: HeaderModule,
+            providers: []
+        };
+    }
 }
